@@ -4,6 +4,30 @@
 
 Ich habe eine Organisation in AWS, die diverse Accounts in verschiedenen Organisational Units enthält. Bitte exportiere mir alle Account Informationen als Liste. Das heißt, ich möchte die Account ID, den Owner Kontaktdaten, Kostenstelle und so weiter. Diverse Informationen findest du in den Tags an den Accounts. Bitte erzeuge mir ein Skript auf Basis von AWS CLI die ich in einer Cloud Shell direkt in AWS laufen lassen kann
 
+### Policy
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ReadAccountsFromOrganization",
+            "Effect": "Allow",
+            "Action": [
+                "organizations:ListAccounts",
+                "organizations:ListTagsForResource",
+                "organizations:ListParents",
+                "organizations:DescribeOrganizationalUnit",
+                "organizations:DescribeOrganization"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
+```
+
+
 ### Result
 ```bash
 #!/bin/bash
