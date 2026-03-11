@@ -1,10 +1,10 @@
 # Export accounts from aws organization
 
 ### CC-Prompt
-```
-Ich habe eine Organisation in AWS, die diverse Accounts in verschiedenen Organisational Units enthält. Bitte exportiere mir alle Account Informationen als Liste. Das heißt, ich möchte die Account ID, den Owner Kontaktdaten, Kostenstelle und so weiter. Diverse Informationen findest du in den Tags an den Accounts. Bitte erzeuge mir ein Skript auf Basis von AWS CLI die ich in einer Cloud Shell direkt in AWS laufen lassen kann
-```
 
+Ich habe eine Organisation in AWS, die diverse Accounts in verschiedenen Organisational Units enthält. Bitte exportiere mir alle Account Informationen als Liste. Das heißt, ich möchte die Account ID, den Owner Kontaktdaten, Kostenstelle und so weiter. Diverse Informationen findest du in den Tags an den Accounts. Bitte erzeuge mir ein Skript auf Basis von AWS CLI die ich in einer Cloud Shell direkt in AWS laufen lassen kann
+
+### Result
 ```bash
 #!/bin/bash
 # =============================================================================
